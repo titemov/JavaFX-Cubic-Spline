@@ -44,7 +44,7 @@ It is possible to change each node coordinate within 20x20 Cartesian coordinate 
 Or you can just press randomization button __"Random"__.
 
 >[!NOTE]
->Nodes can not have same X and Y coordinate
+>Two different nodes can not have same X and Y coordinate
 
 After that you can choose type of cubic spline interpolation by opening a dropdown menu like this:
 
