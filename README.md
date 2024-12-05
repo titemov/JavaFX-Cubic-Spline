@@ -69,5 +69,5 @@ If you see such a thing try to switch to "Fixed" type of boundary condition or j
 
 ## References
 
-Mathematical Elements for Computer Graphics. David F. Rodgers, James Alan Adams. ISBN	0070535272.
+- Mathematical Elements for Computer Graphics. David F. Rodgers, James Alan Adams. ISBN	0070535272.
 
