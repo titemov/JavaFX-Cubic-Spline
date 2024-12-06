@@ -64,7 +64,7 @@ public class Interface extends Application {
         interfaceGroup.getChildren().add(Initializer.initCartesian());
 
         TextField[][] coordinatesTF = new TextField[2][8];
-        interfaceGroup.getChildren().add(Initializer.initCoordinatesTF(coordinatesTF));
+        interfaceGroup.getChildren().add(Initializer.initTF(coordinatesTF,25,45));
 
         double[][] node_coor = new double[2][8];
         Circle[] nodes = new Circle[8];
@@ -75,7 +75,7 @@ public class Interface extends Application {
         interfaceGroup.getChildren().add(Initializer.initCurve(curve));
 
         TextField[][] endpointTF = new TextField[2][2];
-        interfaceGroup.getChildren().add(Initializer.initEndpointTF(endpointTF));
+        interfaceGroup.getChildren().add(Initializer.initTF(endpointTF,25,390));
 
         //###### LABELS ######
 

@@ -1,3 +1,4 @@
+import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
@@ -45,21 +46,20 @@ public class Initializer extends Interface{
         return group;
     }
 
-    public static Group initCoordinatesTF(TextField[][] coordinatesTF){
+    public static Group initTF(TextField[][] textFields, int x,int y){
         Group group = new Group();
-        Label[] tf_count = new Label[8];
-        for(int i=0;i<coordinatesTF.length;i++){
-            for(int n=0;n<coordinatesTF[0].length;n++){
-                tf_count[n] = new Label(String.valueOf(n+1)+")");
-                tf_count[n].setLayoutX(10);
-                tf_count[n].setLayoutY(45+28*n);
-
-                coordinatesTF[i][n] = new TextField();
-                coordinatesTF[i][n].setLayoutX(25+50*i);
-                coordinatesTF[i][n].setLayoutY(45+28*n);
-                coordinatesTF[i][n].setPrefColumnCount(3);
-
-                group.getChildren().addAll(tf_count[n],coordinatesTF[i][n]);
+        Label[] endpoint_nums = new Label[textFields[0].length];
+        for(int i=0;i<textFields.length;i++){
+            for(int n=0;n<textFields[0].length;n++){
+                textFields[i][n] = new TextField("0");
+                textFields[i][n].setLayoutX(x+50*i);
+                textFields[i][n].setLayoutY(y+28*n);
+                textFields[i][n].setPrefColumnCount(3);
+                group.getChildren().addAll(textFields[i][n]);
+                endpoint_nums[n] = new Label((n+1)+")");
+                endpoint_nums[n].setLayoutX(x-15);
+                endpoint_nums[n].setLayoutY(y+28*n);
+                group.getChildren().addAll(endpoint_nums[n]);
             }
         }
         return group;
@@ -112,25 +112,6 @@ public class Initializer extends Interface{
             curve[i].setEndY(startY-curve_coor[1][i]*25);
             curve[i].toBack();
             group.getChildren().add(curve[i]);
-        }
-        return group;
-    }
-
-    public static Group initEndpointTF(TextField[][] endpointTF){
-        Group group = new Group();
-        Label[] endpoint_nums = new Label[endpointTF[0].length];
-        for(int i=0;i<endpointTF.length;i++){
-            for(int n=0;n<endpointTF[0].length;n++){
-                endpointTF[i][n] = new TextField("0");
-                endpointTF[i][n].setLayoutX(25+50*i);
-                endpointTF[i][n].setLayoutY(390+28*n);
-                endpointTF[i][n].setPrefColumnCount(3);
-                group.getChildren().addAll(endpointTF[i][n]);
-                endpoint_nums[n] = new Label((n+1)+")");
-                endpoint_nums[n].setLayoutX(10);
-                endpoint_nums[n].setLayoutY(390+28*n);
-                group.getChildren().addAll(endpoint_nums[n]);
-            }
         }
         return group;
     }
