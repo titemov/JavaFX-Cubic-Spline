@@ -55,7 +55,7 @@ After choosing boundary type just press big button __"Calculate!"__. By pressing
 ![Figure 3. Results](https://github.com/titemov/JavaFX-Cubic-Spline/blob/main/images/result.png)
 
 >[!TIP]
->Fixed (clamped) boundary condition implies that endpoints are known. To enter them use four text fields just below dropdown menu. By default endpoints are `(0;0)` and `(0;0)`
+>Fixed (clamped) boundary condition implies that endpoint vectors are known. To enter them use four text fields just below dropdown menu. By default endpoint vectors are `(0;0)` and `(0;0)`
 
 To erase cubic spline just press __"Clear"__ button on top right of the screen.
 
